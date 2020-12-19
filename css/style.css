@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Source+Sans+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:wght@300;400&display=swap");
 @import url(bootstrap.css);
 @import url(bootstrap-theme.css);
 @font-face {
@@ -8,5 +8,32 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
+.d-flex {
+  display: flex; }
+
+.first-window {
+  background-image: url("../images/bg-header_01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative; }
+  .first-window header {
+    top: 0; }
+    .first-window header .container-fluid {
+      background: none; }
+      .first-window header .container-fluid .navbar-brand {
+        font-family: 'Big John', sans-serif;
+        font-size: 25px;
+        color: #fff; }
+  .first-window h1 {
+    margin: 0 auto 43px;
+    font-size: 35px;
+    color: #fff;
+    font-family: "Source Sans Pro", sans-serif; }
+  .first-window p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300; }
 
 /*# sourceMappingURL=style.css.map */

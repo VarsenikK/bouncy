@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:wght@300;400&display=swap');
 //font-family: 'Open Sans', sans-serif;
 //font-family: 'Source Sans Pro', sans-serif;
+
+$font-family-main: 'Source Sans Pro', sans-serif;
+$font-family-regular: 'Open Sans', sans-serif;
+
 
 @font-face {
   font-family: 'Big John';
@@ -14,6 +18,49 @@
   font-style: normal;
   font-display: swap;
 }
+
 @import "bootstrap.css";
 @import "bootstrap-theme.css";
+
+.d-flex {
+  display: flex;
+}
+
+.first-window {
+  background-image: url('../images/bg-header_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  header {
+    top: 0;
+
+    .container-fluid {
+      background: none;
+
+      .navbar-brand {
+        font-family: 'Big John', sans-serif;
+        font-size: 25px;
+        color: #fff;
+
+      }
+    }
+  }
+
+  h1 {
+    margin: 0 auto 43px;
+    font-size: 35px;
+    color: #fff;
+    font-family: $font-family-main;
+  }
+
+  p {
+    font-family: $font-family-regular;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+
+  }
+}
 
