@@ -2,10 +2,6 @@
 //font-family: 'Open Sans', sans-serif;
 //font-family: 'Source Sans Pro', sans-serif;
 
-$font-family-main: 'Source Sans Pro', sans-serif;
-$font-family-regular: 'Open Sans', sans-serif;
-
-
 @font-face {
   font-family: 'Big John';
   src: url('../fonts/BigJohn.eot');
@@ -19,16 +15,45 @@ $font-family-regular: 'Open Sans', sans-serif;
   font-display: swap;
 }
 
+$font-family-main: 'Source Sans Pro', sans-serif;
+$font-family-regular: 'Open Sans', sans-serif;
+@mixin h3() {
+  font-family: $font-family-main;
+  font-size: 20px;
+  color: #333b46;
+  letter-spacing: 6px;
+}
+
+@mixin p() {
+  font-family: $font-family-regular;
+  font-size: 14px;
+  color: #81868e;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+@mixin link() {
+  padding: 12px 34px 11px;
+  border: 1px solid #333b46;
+  border-radius: 22px;
+  font-size: 16px;
+  color: #333b46;
+  text-decoration: none;
+}
+
 @import "bootstrap.css";
 @import "bootstrap-theme.css";
-@keyframes point{
-  0%{
+
+/*...MAIN SCREEN...*/
+@keyframes point {
+  0% {
     bottom: 77px;
   }
-  100%{
+  100% {
     bottom: 50px;
   }
 }
+
 .d-flex {
   display: flex;
 }
@@ -39,39 +64,69 @@ $font-family-regular: 'Open Sans', sans-serif;
   background-size: cover;
   height: 100vh;
   position: relative;
+  margin-bottom: 80px;
 
   header {
     top: 0;
     background: none;
 
     .container {
-      background-color: transparent;
+      //background-color: transparent;
+      .navbar.navbar-default {
+        background-image: none;
+        background-color: transparent !important;
+        border-color: transparent !important;
+        border: none;
+        box-shadow: none;
 
-      .navbar-brand {
-        font-family: 'Big John', sans-serif;
-        font-size: 25px;
-        color: #fff;
+        .navbar-brand {
+          font-family: 'Big John', sans-serif;
+          font-size: 25px;
+          color: #fff;
+          margin-top: 32px;
+        }
 
+        .navbar-nav {
+          li {
+            margin-top: 39px;
+
+            a {
+              color: #fff;
+              padding: 8px 21px 10px;
+              margin-left: 2px;
+              border: 1px solid rgba(255, 255, 255, 0);
+              border-radius: 20px;
+
+              &:hover {
+                border: 1px solid #fff;
+                border-radius: 20px;
+              }
+            }
+          }
+        }
       }
     }
   }
 
-  h1 {
-    margin: 35vh auto 43px;
-    font-size: 35px;
-    color: #fff;
-    font-family: $font-family-main;
-    letter-spacing: 12px;
+  .container {
+    h1 {
+      margin: 35vh auto 43px;
+      font-size: 35px;
+      color: #fff;
+      font-family: $font-family-main;
+      letter-spacing: 12px;
+    }
+
+    p {
+      font-family: $font-family-regular;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 2px;
+
+    }
   }
 
-  p {
-    font-family: $font-family-regular;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 300;
-    letter-spacing: 2px;
-
-  }
 
   div.arrow {
     width: 36px;
@@ -80,20 +135,198 @@ $font-family-regular: 'Open Sans', sans-serif;
     background-color: #19bd9a;
     position: absolute;
     bottom: 77px;
-    left: 50%;
+    left: 49%;
     font-size: 15px;
     padding: 9px 11px;
-    animation: point 0.9s cubic-bezier(1,.28,.2,.8) infinite;
+    animation: point 0.9s cubic-bezier(1, .28, .2, .8) infinite;
+
     &:before {
       content: "\f078";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       color: #fff;
-
     }
   }
-
-
 }
 
 
+/*...ABOUT...*/
+.about {
+  h3 {
+    @include h3;
+    margin-bottom: 49px;
+
+  }
+
+  p {
+    @include p;
+    margin-bottom: 37px;
+  }
+
+  img {
+    display: block;
+    //width: 100%;
+    margin: auto;
+  }
+
+  a {
+    @include link;
+  }
+}
+
+/*...DETAILS...*/
+.details {
+  background-color: #f3f3f3;
+  padding: 80px 0 101px;
+
+  h3 {
+    @include h3;
+    margin-bottom: 49px;
+
+  }
+
+  p {
+    @include p;
+    margin-bottom: 37px;
+
+  }
+
+  a {
+    display: inline-block;
+    width: 53px;
+    height: 53px;
+    font-size: 28px;
+    line-height: 53px;
+    color: #fff;
+    margin: 61px 13px;
+    border: none;
+    border-radius: 50%;
+    background-color: #81868e;
+
+    &:hover {
+      background-color: #19bd9a;
+    }
+  }
+
+  .ideas {
+    padding-left: 73px;
+
+    h3 {
+      @include h3;
+      padding-left: 15px;
+
+    }
+  }
+}
+
+/*...PROJECTS...*/
+.projects{
+  padding-top: 80px;
+  h3 {
+    @include h3;
+    margin-bottom: 41px;
+  }
+  p {
+    @include p;
+    margin-bottom: 61px;
+  }
+  .d-flex{
+    width: 100%;
+    //height: 320px;
+    padding: 0;
+    margin: 0;
+    justify-content: stretch;
+    img{
+      display: block;
+      width: 50%;
+    }
+    .links{
+      width: 50%;
+      a{
+        width: 50%;
+        position: relative;
+        img{
+          width: 100%;
+          background-color: rgba(0,0,0,0);
+        }
+        span{
+          display: none;
+        }
+        &:hover{
+          background-color: rgba(0,0,0,0.9);
+          z-index: 9;
+          span{
+            @include h3;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 33%;
+            display: inline;
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*...FOOTER...*/
+footer {
+  padding: 80px 0 90px;
+
+  .container {
+    a.brand {
+      display: block;
+      margin: 0 auto 25px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #323a45;
+      font-weight: 900;
+    }
+
+    p {
+      color: #81868e;
+      font-size: 14px;
+      letter-spacing: 2px;
+      font-family: $font-family-regular;
+    }
+
+    .soc.d-flex {
+      justify-content: center;
+
+      a {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        font-size: 14px;
+        line-height: 26px;
+        color: #fff;
+        text-decoration: none;
+        background-color: #3b5998;
+        margin: 38px 5px 0 5px;
+
+        .fb {
+          background-color: #3b5998;
+        }
+
+        .tw {
+          background-color: #26a6d1;
+        }
+
+        .li {
+          background-color: #0e76a8;
+        }
+
+        .in {
+          background-color: #3f729b;
+        }
+
+        .vi {
+          background-color: #86c9ef;
+        }
+      }
+    }
+  }
+}

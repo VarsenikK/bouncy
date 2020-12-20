@@ -8,6 +8,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
+/*...MAIN SCREEN...*/
 @keyframes point {
   0% {
     bottom: 77px; }
@@ -21,23 +22,40 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  margin-bottom: 80px; }
   .first-window header {
     top: 0;
     background: none; }
-    .first-window header .container {
-      background-color: transparent; }
-      .first-window header .container .navbar-brand {
+    .first-window header .container .navbar.navbar-default {
+      background-image: none;
+      background-color: transparent !important;
+      border-color: transparent !important;
+      border: none;
+      box-shadow: none; }
+      .first-window header .container .navbar.navbar-default .navbar-brand {
         font-family: 'Big John', sans-serif;
         font-size: 25px;
-        color: #fff; }
-  .first-window h1 {
+        color: #fff;
+        margin-top: 32px; }
+      .first-window header .container .navbar.navbar-default .navbar-nav li {
+        margin-top: 39px; }
+        .first-window header .container .navbar.navbar-default .navbar-nav li a {
+          color: #fff;
+          padding: 8px 21px 10px;
+          margin-left: 2px;
+          border: 1px solid rgba(255, 255, 255, 0);
+          border-radius: 20px; }
+          .first-window header .container .navbar.navbar-default .navbar-nav li a:hover {
+            border: 1px solid #fff;
+            border-radius: 20px; }
+  .first-window .container h1 {
     margin: 35vh auto 43px;
     font-size: 35px;
     color: #fff;
     font-family: "Source Sans Pro", sans-serif;
     letter-spacing: 12px; }
-  .first-window p {
+  .first-window .container p {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #fff;
@@ -50,7 +68,7 @@
     background-color: #19bd9a;
     position: absolute;
     bottom: 77px;
-    left: 50%;
+    left: 49%;
     font-size: 15px;
     padding: 9px 11px;
     animation: point 0.9s cubic-bezier(1, 0.28, 0.2, 0.8) infinite; }
@@ -59,5 +77,156 @@
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       color: #fff; }
+
+/*...ABOUT...*/
+.about h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  color: #333b46;
+  letter-spacing: 6px;
+  margin-bottom: 49px; }
+.about p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #81868e;
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin-bottom: 37px; }
+.about img {
+  display: block;
+  margin: auto; }
+.about a {
+  padding: 12px 34px 11px;
+  border: 1px solid #333b46;
+  border-radius: 22px;
+  font-size: 16px;
+  color: #333b46;
+  text-decoration: none; }
+
+/*...DETAILS...*/
+.details {
+  background-color: #f3f3f3;
+  padding: 80px 0 101px; }
+  .details h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    color: #333b46;
+    letter-spacing: 6px;
+    margin-bottom: 49px; }
+  .details p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #81868e;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 37px; }
+  .details a {
+    display: inline-block;
+    width: 53px;
+    height: 53px;
+    font-size: 28px;
+    line-height: 53px;
+    color: #fff;
+    margin: 61px 13px;
+    border: none;
+    border-radius: 50%;
+    background-color: #81868e; }
+    .details a:hover {
+      background-color: #19bd9a; }
+  .details .ideas {
+    padding-left: 73px; }
+    .details .ideas h3 {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      color: #333b46;
+      letter-spacing: 6px;
+      padding-left: 15px; }
+
+/*...PROJECTS...*/
+.projects {
+  padding-top: 80px; }
+  .projects h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    color: #333b46;
+    letter-spacing: 6px;
+    margin-bottom: 41px; }
+  .projects p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #81868e;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 61px; }
+  .projects .d-flex {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: stretch; }
+    .projects .d-flex img {
+      display: block;
+      width: 50%; }
+    .projects .d-flex .links {
+      width: 50%; }
+      .projects .d-flex .links a {
+        width: 50%;
+        position: relative; }
+        .projects .d-flex .links a img {
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0); }
+        .projects .d-flex .links a span {
+          display: none; }
+        .projects .d-flex .links a:hover {
+          background-color: rgba(0, 0, 0, 0.9);
+          z-index: 9; }
+          .projects .d-flex .links a:hover span {
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 20px;
+            color: #333b46;
+            letter-spacing: 6px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 33%;
+            display: inline; }
+
+/*...FOOTER...*/
+footer {
+  padding: 80px 0 90px; }
+  footer .container a.brand {
+    display: block;
+    margin: 0 auto 25px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #323a45;
+    font-weight: 900; }
+  footer .container p {
+    color: #81868e;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: "Open Sans", sans-serif; }
+  footer .container .soc.d-flex {
+    justify-content: center; }
+    footer .container .soc.d-flex a {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 26px;
+      color: #fff;
+      text-decoration: none;
+      background-color: #3b5998;
+      margin: 38px 5px 0 5px; }
+      footer .container .soc.d-flex a .fb {
+        background-color: #3b5998; }
+      footer .container .soc.d-flex a .tw {
+        background-color: #26a6d1; }
+      footer .container .soc.d-flex a .li {
+        background-color: #0e76a8; }
+      footer .container .soc.d-flex a .in {
+        background-color: #3f729b; }
+      footer .container .soc.d-flex a .vi {
+        background-color: #86c9ef; }
 
 /*# sourceMappingURL=style.css.map */
