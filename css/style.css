@@ -159,6 +159,7 @@
     line-height: 25px;
     margin-bottom: 61px; }
   .projects .d-flex {
+    flex-wrap: wrap;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -166,8 +167,14 @@
     .projects .d-flex img {
       display: block;
       width: 50%; }
+      @media screen and (max-width: 992px) {
+        .projects .d-flex img {
+          width: 100%; } }
     .projects .d-flex .links {
       width: 50%; }
+      @media screen and (max-width: 992px) {
+        .projects .d-flex .links {
+          width: 100%; } }
       .projects .d-flex .links a {
         width: 50%;
         position: relative; }
@@ -189,6 +196,113 @@
             top: 50%;
             left: 33%;
             display: inline; }
+  .projects .submit {
+    background-image: url("../images/green-bg_02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 15px; }
+    .projects .submit .d-flex {
+      max-width: 1028px;
+      margin: auto;
+      padding: 38px 0;
+      align-items: center;
+      justify-content: space-between; }
+      .projects .submit .d-flex p {
+        color: #fff;
+        font-size: 20px;
+        margin: 0; }
+        @media screen and (max-width: 992px) {
+          .projects .submit .d-flex p {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px; } }
+      .projects .submit .d-flex a {
+        display: inline-block;
+        padding: 12px 34px 11px;
+        border: 1px solid #fff;
+        border-radius: 22px;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none; }
+        @media screen and (max-width: 992px) {
+          .projects .submit .d-flex a {
+            margin: auto; } }
+
+/*...SERVICES...*/
+.services {
+  padding-top: 81px; }
+  .services h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    color: #333b46;
+    letter-spacing: 6px;
+    margin-bottom: 41px; }
+  .services p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #81868e;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 61px; }
+    .services p .green {
+      color: #19bd9a; }
+    .services p .bold {
+      font-weight: 900; }
+  .services .container.d-flex {
+    max-width: 1028px;
+    /*...circular progressbar...*/
+    /*------*/ }
+    .services .container.d-flex h3 {
+      margin-top: 0; }
+    .services .container.d-flex .d-flex {
+      flex-direction: column;
+      margin-right: 44px; }
+    .services .container.d-flex a {
+      display: inline-block;
+      width: 53px;
+      height: 53px;
+      font-size: 28px;
+      line-height: 53px;
+      color: #fff;
+      margin-bottom: 17px;
+      border: none;
+      border-radius: 50%;
+      background-color: #81868e; }
+      .services .container.d-flex a:hover {
+        background-color: #19bd9a; }
+
+.director {
+  background-image: url("../images/bg-person_02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 80px 0 102px; }
+  .director .container {
+    position: relative; }
+    .director .container h3 {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      color: #333b46;
+      letter-spacing: 6px;
+      color: #f3f3f3;
+      margin-bottom: 60px; }
+    .director .container p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #81868e;
+      letter-spacing: 1px;
+      line-height: 25px;
+      color: #b2b3b3;
+      font-size: 16px;
+      margin-bottom: 34px; }
+      .director .container p .green {
+        color: #19bd9a; }
+    .director .container .image {
+      position: absolute;
+      right: 0;
+      top: -138px;
+      width: 410px;
+      height: 330px; }
 
 /*...FOOTER...*/
 footer {
