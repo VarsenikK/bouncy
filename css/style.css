@@ -230,7 +230,7 @@
 
 /*...SERVICES...*/
 .services {
-  padding-top: 81px; }
+  padding: 81px 20px 137px; }
   .services h3 {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
@@ -248,16 +248,18 @@
       color: #19bd9a; }
     .services p .bold {
       font-weight: 900; }
-  .services .container.d-flex {
-    max-width: 1028px;
+  .services .central {
     /*...circular progressbar...*/
     /*------*/ }
-    .services .container.d-flex h3 {
-      margin-top: 0; }
-    .services .container.d-flex .d-flex {
+    .services .central h3 {
+      margin-top: 0;
+      display: block; }
+    .services .central p {
+      display: block; }
+    .services .central .icons.d-flex {
       flex-direction: column;
       margin-right: 44px; }
-    .services .container.d-flex a {
+    .services .central a {
       display: inline-block;
       width: 53px;
       height: 53px;
@@ -268,8 +270,41 @@
       border: none;
       border-radius: 50%;
       background-color: #81868e; }
-      .services .container.d-flex a:hover {
+      .services .central a:hover {
         background-color: #19bd9a; }
+    .services .central .bg-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      .services .central .bg-style .counter {
+        display: inline-flex;
+        cursor: pointer;
+        width: 124px;
+        height: 124px;
+        max-width: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 500;
+        transition: height .2s ease-in-out;
+        background: #fff;
+        border-radius: 50%;
+        margin-left: 40px; }
+      .services .central .bg-style .percentage {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 0;
+        right: 0;
+        vertical-align: middle;
+        transform: translate3d(0, -50%, 0); }
+      .services .central .bg-style canvas {
+        position: absolute;
+        top: 0;
+        right: 0; }
+      .services .central .bg-style body {
+        text-align: center; }
 
 .director {
   background-image: url("../images/bg-person_02.jpg");

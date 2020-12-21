@@ -335,7 +335,7 @@ $font-family-regular: 'Open Sans', sans-serif;
 
 /*...SERVICES...*/
 .services {
-  padding-top: 81px;
+  padding: 81px 20px 137px;
 
   h3 {
     @include h3;
@@ -345,58 +345,107 @@ $font-family-regular: 'Open Sans', sans-serif;
   p {
     @include p;
     margin-bottom: 61px;
-    .green{
+
+    .green {
       color: #19bd9a;
     }
-    .bold{
+
+    .bold {
       font-weight: 900;
     }
   }
 
-  .container.d-flex {
-    max-width: 1028px;
+  .central {
+    //max-width: 1028px;
+      h3 {
+        margin-top: 0;
+        display: block;
+      }
+      p{
+        display: block;
+      }
 
-    h3 {
-      margin-top: 0;
-    }
+      .icons.d-flex {
+        flex-direction: column;
+        margin-right: 44px;
+      }
 
-    .d-flex {
-      flex-direction: column;
-      margin-right: 44px;
-    }
+      a {
+        display: inline-block;
+        width: 53px;
+        height: 53px;
+        font-size: 28px;
+        line-height: 53px;
+        color: #fff;
+        margin-bottom: 17px;
+        border: none;
+        border-radius: 50%;
+        background-color: #81868e;
 
-    a {
-      display: inline-block;
-      width: 53px;
-      height: 53px;
-      font-size: 28px;
-      line-height: 53px;
-      color: #fff;
-      margin-bottom: 17px;
-      border: none;
-      border-radius: 50%;
-      background-color: #81868e;
+        &:hover {
+          background-color: #19bd9a;
+        }
+      }
 
-      &:hover {
-        background-color: #19bd9a;
+
+    /*...circular progressbar...*/
+    .bg-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .counter {
+        display: inline-flex;
+        cursor: pointer;
+        width: 124px;
+        height: 124px;
+        max-width: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 500;
+        transition: height .2s ease-in-out;
+        background: #fff;
+        border-radius: 50%;
+        margin-left: 40px;
+      }
+
+      .percentage {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 0;
+        right: 0;
+        vertical-align: middle;
+        transform: translate3d(0, -50%, 0);
+      }
+
+      canvas {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      body {
+        text-align: center;
       }
     }
 
-    /*...circular progressbar...*/
-
-
-
-/*------*/
+    /*------*/
   }
 }
-.director{
+
+.director {
   background-image: url('../images/bg-person_02.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding: 80px 0 102px;
-  .container{
+
+  .container {
     position: relative;
+
     h3 {
       @include h3;
       color: #f3f3f3;
@@ -408,11 +457,13 @@ $font-family-regular: 'Open Sans', sans-serif;
       color: #b2b3b3;
       font-size: 16px;
       margin-bottom: 34px;
-      .green{
+
+      .green {
         color: #19bd9a;
       }
     }
-    .image{
+
+    .image {
       position: absolute;
       right: 0;
       top: -138px;
@@ -420,9 +471,6 @@ $font-family-regular: 'Open Sans', sans-serif;
       height: 330px;
     }
   }
-
-
-
 
 
 }
