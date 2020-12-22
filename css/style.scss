@@ -477,6 +477,24 @@ $font-family-regular: 'Open Sans', sans-serif;
 
 /*....GALERY...*/
 
+.container {
+  position: relative;
+  padding-top: 80px;
+
+  h3 {
+    @include h3;
+    color: #333b46;
+    margin-bottom: 41px;
+  }
+
+  p {
+    @include p;
+    color: #81868e;
+    font-size: 14px;
+    margin-bottom: 81px;
+  }
+}
+
 #masonry {
   column-count: 2;
   column-gap: 1em;
@@ -511,7 +529,7 @@ $font-family-regular: 'Open Sans', sans-serif;
 }
 
 .item {
-  background-color: none;
+  //background-color: none;
   display: inline-block;
   margin: 0 0 1em 0;
   width: 100%;
