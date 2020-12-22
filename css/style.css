@@ -340,94 +340,87 @@
       height: 330px; }
 
 /*....GALERY...*/
-.container {
-  position: relative;
-  padding-top: 80px; }
-  .container h3 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 20px;
-    color: #333b46;
-    letter-spacing: 6px;
-    color: #333b46;
-    margin-bottom: 41px; }
-  .container p {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #81868e;
-    letter-spacing: 1px;
-    line-height: 25px;
-    color: #81868e;
-    font-size: 14px;
-    margin-bottom: 81px; }
-
-#masonry {
-  column-count: 2;
-  column-gap: 1em; }
-
-@media (min-width: 30em) {
-  #masonry {
-    column-count: 2;
-    column-gap: 1em; } }
-@media (min-width: 40em) {
-  #masonry {
-    column-count: 3;
-    column-gap: 1em; } }
-@media (min-width: 60em) {
-  #masonry {
-    column-count: 4;
-    column-gap: 1em; } }
-@media (min-width: 75em) {
-  #masonry {
-    column-count: 4;
-    column-gap: 1em; } }
-.item {
-  display: inline-block;
-  margin: 0 0 1em 0;
-  width: 100%;
-  cursor: pointer; }
-
-.item img {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-  margin-bottom: -4px;
-  /*idk why but this fix stuff*/ }
-
-.item.active {
-  animation-name: active-in;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
-  animation-direction: alternate; }
-
-.item.active:before {
-  content: "+";
-  transform: rotate(45deg);
-  font-size: 48px;
-  color: white;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  text-align: center;
-  line-height: 48px;
-  z-index: 12; }
-
-.item.active img {
-  animation-name: active-in-img;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
-  animation-direction: alternate; }
-
+.gallery {
+  background-color: #f3f3f3; }
+  .gallery .container {
+    position: relative;
+    padding-top: 80px; }
+    .gallery .container h3 {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      color: #333b46;
+      letter-spacing: 6px;
+      color: #333b46;
+      margin-bottom: 41px; }
+    .gallery .container p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #81868e;
+      letter-spacing: 1px;
+      line-height: 25px;
+      color: #81868e;
+      font-size: 14px;
+      margin-bottom: 81px; }
+    .gallery .container #masonry {
+      column-count: 2;
+      column-gap: 1em; }
+    @media (min-width: 30em) {
+      .gallery .container #masonry {
+        column-count: 2;
+        column-gap: 1em; } }
+    @media (min-width: 40em) {
+      .gallery .container #masonry {
+        column-count: 3;
+        column-gap: 1em; } }
+    @media (min-width: 60em) {
+      .gallery .container #masonry {
+        column-count: 4;
+        column-gap: 1em; } }
+    @media (min-width: 75em) {
+      .gallery .container #masonry {
+        column-count: 4;
+        column-gap: 1em; } }
+    .gallery .container .item {
+      background-color: transparent;
+      display: inline-block;
+      margin: 0 0 1em 0;
+      width: 100%;
+      cursor: pointer; }
+    .gallery .container .item img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+      margin-bottom: -4px;
+      /*idk why but this fix stuff*/ }
+    .gallery .container .item.active {
+      animation-name: active-in;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+      animation-direction: alternate; }
+    .gallery .container .item.active:before {
+      content: "+";
+      transform: rotate(45deg);
+      font-size: 48px;
+      color: white;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      z-index: 12; }
+    .gallery .container .item.active img {
+      animation-name: active-in-img;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+      animation-direction: alternate; }
 @keyframes active-in {
   0% {
     opacity: 1;
     background-color: white; }
-  50% {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.9); }
   100% {
     opacity: 1;
     position: fixed;
@@ -443,14 +436,6 @@
     top: 0;
     left: 0;
     max-width: 100%; }
-  49% {
-    opacity: 0;
-    transform: translate(0%, -50%); }
-  50% {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%); }
   100% {
     display: block;
     position: absolute;
@@ -461,6 +446,29 @@
     width: auto;
     max-height: 95vh;
     opacity: 1; } }
+    .gallery .container .down {
+      background-image: url("../images/bg-green-container_03.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 1140px;
+      margin: 40px auto 80px;
+      padding: 58px 0 57px;
+      flex-direction: column; }
+      .gallery .container .down p {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px; }
+      .gallery .container .down a {
+        display: inline-block;
+        margin: auto;
+        padding: 12px 29px 11px;
+        border: 1px solid #fff;
+        border-radius: 22px;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none; }
+
 /*...FOOTER...*/
 footer {
   padding: 80px 0 90px; }
