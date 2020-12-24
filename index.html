@@ -33,11 +33,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a class="text-right" href="#">Hello</a></li>
-                            <li><a class="text-right" href="#">About </a></li>
-                            <li><a class="text-right" href="#">Services</a></li>
-                            <li><a class="text-right" href="#">Portfolio</a></li>
-                            <li><a class="text-right" href="#">Team</a></li>
+                            <li><a class="text-right" href="#about">Hello</a></li>
+                            <li><a class="text-right" href="#details">About </a></li>
+                            <li><a class="text-right" href="#services">Services</a></li>
+                            <li><a class="text-right" href="#gallery">Portfolio</a></li>
+                            <li><a class="text-right" href="#team">Team</a></li>
                             <li><a class="text-right" href="#">Blog</a></li>
                             <li><a class="text-right" href="#">Contact</a></li>
                         </ul>
@@ -55,9 +55,9 @@
 </section>
 
 <!--ABOUT-->
-<section class="container about">
+<section class="container about"id="about">
     <div class="row">
-        <div class="col-md-6 col-md-offset-1">
+        <div class="col-md-6 col-md-offset-1 col-sm-12">
             <h3 class="text-uppercase">This is Bouncy</h3>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
                 atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
@@ -65,13 +65,13 @@
                 quidem rerum facilis est et expedita distinctio. </p>
             <a href="#">Read More</a>
         </div>
-        <div class="col-md-4"><img src="images/tablet_03.png" alt="tablet"></div>
+        <div class="col-md-4 col-sm-12"><img src="images/tablet_03.png" alt="tablet"></div>
     </div>
 </section>
 
 <!--DETAILS-->
 <section class="details">
-    <div class="container">
+    <div class="container" id="details">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <h3 class="text-center text-uppercase">DetailS ABOUT BOUNCY</h3>
@@ -86,13 +86,13 @@
         </div>
         <div class="row ideas">
             <h3>Creative Ideas</h3>
-            <div class="col-md-4">
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+<!--            <div class="col-md-4">-->
+            <p class="col-md-4">At <span class="green"><b>vero</b></span> eos et accusamus et iusto odio dignissimos <b>ducimus</b> qui blanditiis praesentium voluptatum
                     deleniti atque corrupti quos dolores</p>
-            </div>
+<!--            </div>-->
             <p class="col-md-6 col-md-offset-1">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                blanditiis praesentium voluptatum deleniti atque <b>corrupti quos</b> dolores et quas molestias <span class="green"><b>excepturi</b></span> sint
+                occaecati cupiditate non provident, <b>similique</b> sunt in culpa qui officia deserunt mollitia animi, id est
                 laborum et dolorum fuga. Et harum quidem r</p>
         </div>
     </div>
@@ -127,7 +127,7 @@
 
 <!--SERVICES-->
 <section class="services">
-    <div class="container">
+    <div class="container" id="services">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <div>
@@ -149,11 +149,11 @@
                 <div>
                     <h3>Graphic Design</h3>
 
-                    <p>At vero eos et accusamus et <span class="green">iusto</span> odio dignissimos <span class="bold">ducimus</span>
+                    <p>At vero eos et accusamus et <span class="green"><b>iusto</b></span> odio dignissimos <span class="bold">ducimus</span>
                         qui blanditiis praesentium voluptatum
                         deleniti</p>
                     <p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span
-                            class="green">similique sunt</span>
+                            class="green"><b>similique sunt</b></span>
                         in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
                 </div>
             </div>
@@ -173,12 +173,10 @@
                     <p class="text-center">UI/UX</p>
                 </div>
             </div>
-            <!--------->
         </div>
     </div>
-    <!--    </div>-->
-
 </section>
+
 <section class="director">
     <div class="container ">
         <div class="row">
@@ -199,7 +197,7 @@
 
 <!--GALERY-->
 <section class="gallery">
-    <div class="container">
+    <div class="container" id="gallery">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <h3 class="text-center text-uppercase">THE PORTFOLIO</h3>
@@ -259,19 +257,16 @@
                 </div>
             </div>
             <div class="down d-flex">
-                <!--                <div class="d-flex">-->
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </p>
                 <a href="#">Start Project</a>
-                <!--                </div>-->
             </div>
         </div>
     </div>
-
 </section>
 
 
 <!--CAROUSEL-->
-<section class="team">
+<section class="team" id="team">
     <h3 class="text-center text-uppercase">THE TEAM</h3>
     <p class="text-center">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
 
@@ -352,10 +347,10 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-xs-12">
                     <img src="images/photo_man_03.jpg" alt="photo">
                 </div>
-                <div class="col-sm-4 col-sm-offset-3">
+                <div class="col-sm-4 col-sm-offset-3 col-xs-10">
                     <div>
                         <h4 class="text-right">Abdullah Noman</h4>
                         <h5 class="text-right"><em>Creative Director, Code Cafe</em></h5>
@@ -391,10 +386,18 @@
 </section>
 <!-end-->
 
+<!-dark-->
 <section class="dark">
     <p class="text-center">Already Loved Us? Let’s talk!</p>
     <a class="text-center" href="#">Contact Us</a>
 </section>
+
+<!--MAP-->
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.1973844552!2d36.215117115881576!3d50.02639712570935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a1365d886413%3A0x5352441f03b7f0fa!2z0YPQuy4g0J7RgtCw0LrQsNGA0LAg0K_RgNC-0YjQsCwgMTgsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1608832377333!5m2!1sru!2sua" width="100%" height="496" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+
 
 <!--FOOTER-->
 <footer>
@@ -402,15 +405,15 @@
         <a class="brand text-uppercase text-center" href="#">Bouncy</a>
         <p class="text-center">Copyright 2015. All rights Reserved</p>
         <div class="soc d-flex">
-            <a class="fb text-center" href="https://www.facebook.com" target="_blank" title="facebook"><i
+            <a class="text-center" href="https://www.facebook.com" target="_blank" title="facebook"><i
                     class="fab fa-facebook-f"></i></a>
-            <a class="tw text-center" href="https://twitter.com" target="_blank" title="twitter"><i
+            <a class="text-center" href="https://twitter.com" target="_blank" title="twitter"><i
                     class="fab fa-twitter"></i></a>
-            <a class="li text-center" href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i
+            <a class="text-center" href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i
                     class="fab fa-linkedin-in"></i></a>
-            <a class="in text-center" href="https://www.instagram.com" target="_blank" title="instagram"><i
+            <a class="text-center" href="https://www.instagram.com" target="_blank" title="instagram"><i
                     class="fab fa-instagram"></i></a>
-            <a class="vi text-center" href="https://vimeo.com" target="_blank" title="vimeo"><i
+            <a class="text-center" href="https://vimeo.com" target="_blank" title="vimeo"><i
                     class="fab fa-vimeo-v"></i></a>
 
         </div>
