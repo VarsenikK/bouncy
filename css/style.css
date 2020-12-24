@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:wght@300;400&display=swap");
+@import url(owl.carousel.css);
+@import url(owl.theme.default.css);
 @import url(bootstrap.css);
 @import url(bootstrap-theme.css);
 @font-face {
@@ -288,8 +290,10 @@
         font-size: 25px;
         font-weight: 500;
         transition: height .2s ease-in-out;
-        background: #fff;
+        background-color: #fff;
         border-radius: 50%;
+        margin-left: 40px; }
+      .services .central .bg-style p {
         margin-left: 40px; }
       .services .central .bg-style .percentage {
         position: absolute;
@@ -361,62 +365,90 @@
       color: #81868e;
       font-size: 14px;
       margin-bottom: 81px; }
-    .gallery .container #masonry {
+    .gallery .container ul {
+      align-items: stretch; }
+      .gallery .container ul li:hover {
+        background-color: transparent; }
+      .gallery .container ul li a {
+        color: #464646;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif; }
+      .gallery .container ul li:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: #19bd9a; }
+      .gallery .container ul li:hover:after {
+        content: "";
+        display: block;
+        width: 38px;
+        height: 2px;
+        margin: auto;
+        background-color: #19bd9a; }
+  .gallery #masonry {
+    column-count: 2;
+    column-gap: 1em; }
+  @media (min-width: 30em) {
+    .gallery #masonry {
       column-count: 2;
-      column-gap: 1em; }
-    @media (min-width: 30em) {
-      .gallery .container #masonry {
-        column-count: 2;
-        column-gap: 1em; } }
-    @media (min-width: 40em) {
-      .gallery .container #masonry {
-        column-count: 3;
-        column-gap: 1em; } }
-    @media (min-width: 60em) {
-      .gallery .container #masonry {
-        column-count: 4;
-        column-gap: 1em; } }
-    @media (min-width: 75em) {
-      .gallery .container #masonry {
-        column-count: 4;
-        column-gap: 1em; } }
-    .gallery .container .item {
-      background-color: transparent;
-      display: inline-block;
-      margin: 0 0 1em 0;
+      column-gap: 1em; } }
+  @media (min-width: 40em) {
+    .gallery #masonry {
+      column-count: 3;
+      column-gap: 1em; } }
+  @media (min-width: 60em) {
+    .gallery #masonry {
+      column-count: 4;
+      column-gap: 1em; } }
+  @media (min-width: 75em) {
+    .gallery #masonry {
+      column-count: 4;
+      column-gap: 1em; } }
+  .gallery .item {
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 0 1em 0;
+    width: 100%;
+    cursor: pointer; }
+    .gallery .item:after {
+      content: "";
+      display: block;
       width: 100%;
-      cursor: pointer; }
-    .gallery .container .item img {
-      max-width: 100%;
-      height: auto;
-      width: 100%;
-      margin-bottom: -4px;
-      /*idk why but this fix stuff*/ }
-    .gallery .container .item.active {
-      animation-name: active-in;
-      animation-duration: 0.2s;
-      animation-fill-mode: forwards;
-      animation-direction: alternate; }
-    .gallery .container .item.active:before {
-      content: "+";
-      transform: rotate(45deg);
-      font-size: 48px;
-      color: white;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: rgba(0, 0, 0, 0.85);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      text-align: center;
-      line-height: 48px;
-      z-index: 12; }
-    .gallery .container .item.active img {
-      animation-name: active-in-img;
-      animation-duration: 0.2s;
-      animation-fill-mode: forwards;
-      animation-direction: alternate; }
+      height: 100%; }
+      .gallery .item:after:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 99; }
+  .gallery .item img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    margin-bottom: -4px; }
+  .gallery .item.active {
+    animation-name: active-in;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate; }
+  .gallery .item.active:before {
+    content: "+";
+    transform: rotate(45deg);
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    z-index: 12; }
+  .gallery .item.active img {
+    animation-name: active-in-img;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate; }
 @keyframes active-in {
   0% {
     opacity: 1;
@@ -446,28 +478,107 @@
     width: auto;
     max-height: 95vh;
     opacity: 1; } }
-    .gallery .container .down {
-      background-image: url("../images/bg-green-container_03.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      max-width: 1140px;
-      margin: 40px auto 80px;
-      padding: 58px 0 57px;
-      flex-direction: column; }
-      .gallery .container .down p {
-        color: #fff;
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 30px; }
-      .gallery .container .down a {
+  .gallery .down {
+    background-image: url("../images/bg-green-container_03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1140px;
+    margin: 40px auto 80px;
+    padding: 58px 0 57px;
+    flex-direction: column; }
+    .gallery .down p {
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px; }
+    .gallery .down a {
+      display: inline-block;
+      margin: auto;
+      padding: 12px 29px 11px;
+      border: 1px solid #fff;
+      border-radius: 22px;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none; }
+
+/*...CAROUSEL...*/
+.team {
+  padding: 80px 0 100px; }
+  .team h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    color: #333b46;
+    letter-spacing: 6px;
+    color: #333b46;
+    margin-bottom: 41px; }
+  .team p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #81868e;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #81868e;
+    font-size: 14px;
+    margin: 0 auto 62px;
+    max-width: 600px; }
+  .team .owl-carousel img {
+    margin-bottom: 61px; }
+  .team .owl-carousel .owl-dots {
+    text-align: center; }
+    .team .owl-carousel .owl-dots .owl-dot {
+      outline: none; }
+      .team .owl-carousel .owl-dots .owl-dot span {
         display: inline-block;
-        margin: auto;
-        padding: 12px 29px 11px;
-        border: 1px solid #fff;
-        border-radius: 22px;
-        font-size: 16px;
-        color: #fff;
-        text-decoration: none; }
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #19bd9a;
+        background-color: #19bd9a;
+        margin: 5px; }
+      .team .owl-carousel .owl-dots .owl-dot.active span {
+        background-color: #fff; }
+  .team .owl-carousel h4 {
+    color: #464646;
+    font-size: 20px; }
+  .team .owl-carousel h5 {
+    color: #81868e;
+    font-size: 18px;
+    font-family: "Source Sans Pro", sans-serif; }
+  .team .owl-carousel .name:after {
+    content: "";
+    display: inline-block;
+    background-color: #19bd9a;
+    width: 4px;
+    height: 43px;
+    margin-top: 10px; }
+  .team .owl-carousel .progress {
+    height: 4px; }
+    .team .owl-carousel .progress .progress-bar {
+      height: 4px;
+      background-color: #19bd9a;
+      background-image: none; }
+
+.dark {
+  background-image: url("../images/bg-dark_02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 58px 0 57px;
+  display: flex;
+  flex-direction: column; }
+  .dark p {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px; }
+  .dark a {
+    display: inline-block;
+    margin: auto;
+    padding: 12px 29px 11px;
+    border: 1px solid #fff;
+    border-radius: 22px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none; }
 
 /*...FOOTER...*/
 footer {
