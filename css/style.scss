@@ -182,10 +182,24 @@ $font-family-regular: 'Open Sans', sans-serif;
     margin: 0 auto 76px;
   }
 
-  a {
-    @include link;
+  .btn-lg {
+    background-image: none;
+    padding: 12px 34px 11px;
+    border: 1px solid #333b46;
+    border-radius: 22px;
+    font-size: 16px;
+    color: #333b46;
+    text-decoration: none;
     display: inline-block;
     margin-bottom: 26px;
+    outline: none;
+    background-color: #fff;
+    &:active{
+      border: 1px solid #333b46;
+      background-color: #fff;
+      color: #333b46;
+      outline: none;
+    }
   }
 }
 
@@ -398,6 +412,7 @@ $font-family-regular: 'Open Sans', sans-serif;
       @include max-screen(767px) {
         //flex-wrap: wrap;
         flex-direction: row;
+        flex-wrap: wrap;
         a {
           margin: 10px
         }
@@ -774,12 +789,12 @@ $font-family-regular: 'Open Sans', sans-serif;
           height: 10px;
           border-radius: 50%;
           border: 1px solid #19bd9a;
-          background-color: #19bd9a;
+          background-color: #fff;
           margin: 5px;
         }
 
         &.active span {
-          background-color: #fff;
+          background-color: #19bd9a;
         }
       }
     }
@@ -787,16 +802,6 @@ $font-family-regular: 'Open Sans', sans-serif;
     h4 {
       color: #464646;
       font-size: 20px;
-      //margin-right: 43px;
-      //&:after {
-      //  content: "";
-      //  display: inline-block;
-      //  background-color: #19bd9a;
-      //  width: 4px;
-      //  height: 21px;
-      //  top: 0;
-      //  margin-left: 43px;
-      //}
     }
 
     h5 {
@@ -804,6 +809,16 @@ $font-family-regular: 'Open Sans', sans-serif;
       font-size: 18px;
       font-family: $font-family-main;
 
+    }
+    .label{
+      color: #81868e;
+      font-size: 16px;
+      font-family: $font-family-main;
+      font-weight: 300;
+      padding-left: 0;
+      span{
+        float: right;
+      }
     }
 
     .name {
@@ -825,6 +840,7 @@ $font-family-regular: 'Open Sans', sans-serif;
 
     .progress {
       height: 4px;
+      margin-bottom: 36px;
 
       .progress-bar {
         height: 4px;
@@ -868,6 +884,121 @@ $font-family-regular: 'Open Sans', sans-serif;
   }
 }
 
+/*...CAROUSEL 2.....*/
+.testimonials{
+  background-color: #f3f3f3;
+  padding: 80px 0 100px;
+  h3 {
+    @include h3;
+    color: #333b46;
+    margin-bottom: 41px;
+  }
+
+  p.text-center {
+    @include p;
+    color: #81868e;
+    font-size: 14px;
+    margin: 0 auto 62px;
+    max-width: 550px;
+  }
+  .owl-carousel{
+    background-color: #fff;
+    padding: 52px 0 60px;
+    -webkit-box-shadow: 1px 1px 0 0 #e7e7e7;
+    box-shadow: 1px 1px 0 0 #e7e7e7;
+    .owl-dots {
+      text-align: center;
+      .owl-dot {
+        outline: none;
+        & span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 1px solid #19bd9a;
+          background-color: #fff;
+          margin: 5px;
+        }
+        &.active span {
+          background-color: #19bd9a;
+        }
+      }
+    }
+    p{
+      //width: 100%;
+      margin: 0 0 30px 0;
+    }
+    h4{
+      font-family: $font-family-regular;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    h5{
+      font-family: $font-family-regular;
+      color: #464646;
+      font-size: 14px;
+    }
+  }
+}
+
+/*....NEWS....*/
+.news{
+  background-image: url('../images/bg-news_02.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0 104px;
+  h3 {
+    @include h3;
+    color: #fff;
+    margin-bottom: 41px;
+  }
+
+  p{
+    @include p;
+    color: #b2b3b3;
+    font-size: 14px;
+    margin-bottom: 104px;
+    max-width: 500px;
+  }
+
+  .owl-carousel{
+    h3{
+      color: #e1e4e9;
+      margin-bottom: 13px;
+    }
+    h4{
+      color: #81868e;
+      margin-bottom: 20px;
+    }
+    .small{
+      color: #464646;
+      font-size: 14px;
+      margin-bottom: 61px;
+    }
+    p{
+      color: #81868e;
+      font-size: 14px;
+      margin-bottom: 64px;
+    }
+  }
+  .btn{
+    background-image: none;
+    background-color: transparent;
+    color: #b2b3b3;
+    border: none;
+    outline: none;
+  }
+  span{
+    color: #81868e;
+    font-size: 14px;
+  }
+
+
+
+
+}
+
+
 /*...Subscribe us...*/
 .subscribe{
   background-image: url('../images/bg-form_02.jpg');
@@ -894,6 +1025,10 @@ $font-family-regular: 'Open Sans', sans-serif;
     border-radius: 0;
     font-size: 14px;
     padding: 14px 0 14px 22px;
+    @include max-screen(546px){
+      width: 100%;
+    }
+
   }
   button{
     background-image: none;
@@ -906,6 +1041,10 @@ $font-family-regular: 'Open Sans', sans-serif;
     font-size: 14px;
     padding: 16px 0 15px;
     margin-bottom: 15px;
+    &:active{
+      border: 1px solid #fff;
+    }
+
   }
 }
 
@@ -939,6 +1078,8 @@ $font-family-regular: 'Open Sans', sans-serif;
       max-width: 287px;
       background-color: #fff;
       margin-bottom: 40px;
+      -webkit-box-shadow: 1px 1px 0 0 #e7e7e7;
+      box-shadow: 1px 1px 0 0 #e7e7e7;
       @include max-screen(992px) {
         margin: 0 20px 40px;
       }
