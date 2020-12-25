@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,900;1,300&display=swap");
 @import url(owl.carousel.css);
 @import url(owl.theme.default.css);
 @import url(bootstrap.css);
@@ -325,8 +325,14 @@
         background-color: #fff;
         border-radius: 50%;
         margin-left: 40px; }
+        @media screen and (max-width: 767px) {
+          .services .central .bg-style .counter {
+            margin: 0 15px 0; } }
       .services .central .bg-style p {
         margin-left: 40px; }
+        @media screen and (max-width: 767px) {
+          .services .central .bg-style p {
+            margin: 0 15px 15px; } }
       .services .central .bg-style .percentage {
         position: absolute;
         text-align: center;
@@ -704,29 +710,101 @@
     font-size: 14px;
     margin-bottom: 104px;
     max-width: 500px; }
-  .news .owl-carousel h3 {
-    color: #e1e4e9;
-    margin-bottom: 13px; }
-  .news .owl-carousel h4 {
-    color: #81868e;
-    margin-bottom: 20px; }
-  .news .owl-carousel .small {
-    color: #464646;
+  .news .owl-carousel {
+    position: relative; }
+    .news .owl-carousel h3 {
+      color: #e1e4e9;
+      margin-bottom: 13px; }
+    .news .owl-carousel h4 {
+      color: #81868e;
+      margin-bottom: 20px; }
+    .news .owl-carousel .small {
+      color: #464646;
+      font-size: 14px;
+      margin-bottom: 61px; }
+    .news .owl-carousel p {
+      color: #81868e;
+      font-size: 14px;
+      margin-bottom: 64px; }
+    .news .owl-carousel .btn {
+      background-image: none;
+      background-color: transparent;
+      color: #b2b3b3;
+      border: none;
+      outline: none; }
+    .news .owl-carousel span {
+      color: #81868e;
+      font-size: 14px; }
+    .news .owl-carousel .owl-dots .owl-dot span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #b2b3b3;
+      position: absolute;
+      top: 30%;
+      right: 0;
+      margin: 5px; }
+
+/*...PRICE...*/
+.price {
+  background-color: #f3f3f3;
+  padding: 80px 0 101px;
+  text-align: center; }
+  .price h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    color: #333b46;
+    letter-spacing: 6px;
+    color: #333b46;
+    margin-bottom: 41px; }
+  .price p {
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
-    margin-bottom: 61px; }
-  .news .owl-carousel p {
+    color: #81868e;
+    letter-spacing: 1px;
+    line-height: 25px;
     color: #81868e;
     font-size: 14px;
-    margin-bottom: 64px; }
-  .news .btn {
-    background-image: none;
-    background-color: transparent;
-    color: #b2b3b3;
-    border: none;
-    outline: none; }
-  .news span {
-    color: #81868e;
-    font-size: 14px; }
+    margin: 0 auto 61px;
+    max-width: 600px; }
+  .price .coupon {
+    background-color: #fff;
+    padding: 0;
+    -webkit-box-shadow: 1px 1px 0 0 #e7e7e7;
+    box-shadow: 1px 1px 0 0 #e7e7e7; }
+    @media screen and (max-width: 992px) {
+      .price .coupon {
+        margin: 15px;
+        width: 95%; } }
+    .price .coupon h3 {
+      background-color: #19bd9a;
+      color: #fff;
+      padding: 27px 0 26px;
+      margin: 0 0 67px 0; }
+    .price .coupon .bottom {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      margin-bottom: 0;
+      letter-spacing: normal;
+      padding: 27px 0 29px; }
+      .price .coupon .bottom i {
+        margin-left: 13px;
+        font-size: 16px; }
+    .price .coupon p.text-center {
+      font-size: 20px;
+      margin-bottom: 107px; }
+    .price .coupon .big {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 900;
+      font-size: 42px;
+      margin: 67px 0 11px; }
+    .price .coupon p.text-left {
+      color: #81868e;
+      padding: 35px 30px 35px 33px;
+      margin: 0;
+      font-size: 14px;
+      line-height: 31px; }
 
 /*...Subscribe us...*/
 .subscribe {
