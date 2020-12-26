@@ -44,17 +44,21 @@
         font-size: 25px;
         color: #fff;
         margin-top: 32px; }
-      .first-window header .container .navbar.navbar-default .navbar-nav li {
+      .first-window header .container .navbar.navbar-default .navbar-toggle {
         margin-top: 39px; }
-        .first-window header .container .navbar.navbar-default .navbar-nav li a {
-          color: #b2b3b3;
-          padding: 8px 21px 10px;
-          margin-left: 2px;
-          border: 1px solid rgba(255, 255, 255, 0);
-          border-radius: 20px; }
-          .first-window header .container .navbar.navbar-default .navbar-nav li a:hover {
-            border: 1px solid #fff;
+      .first-window header .container .navbar.navbar-default .navbar-nav {
+        margin-top: 39px; }
+        .first-window header .container .navbar.navbar-default .navbar-nav li {
+          margin-bottom: 20px; }
+          .first-window header .container .navbar.navbar-default .navbar-nav li a {
+            color: #b2b3b3;
+            padding: 8px 21px 10px;
+            margin-left: 2px;
+            border: 1px solid rgba(255, 255, 255, 0);
             border-radius: 20px; }
+            .first-window header .container .navbar.navbar-default .navbar-nav li a:hover {
+              border: 1px solid #fff;
+              border-radius: 20px; }
   .first-window .container h1 {
     margin: 35vh auto 43px;
     font-size: 35px;
@@ -204,6 +208,9 @@
       .projects .d-flex .links a {
         width: 50%;
         position: relative; }
+        @media screen and (max-width: 768px) {
+          .projects .d-flex .links a {
+            width: 100%; } }
         .projects .d-flex .links a img {
           display: block;
           width: 100%; }
