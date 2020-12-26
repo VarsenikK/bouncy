@@ -77,7 +77,7 @@
     left: 49%;
     font-size: 15px;
     padding: 9px 11px;
-    animation: point 0.9s cubic-bezier(1, 0.28, 0.2, 0.8) infinite; }
+    animation: point 1s cubic-bezier(0.67, 0.47, 0.31, 0.61) infinite; }
     .first-window div.arrow:before {
       content: "\f078";
       font-family: "Font Awesome 5 Free";
@@ -735,16 +735,24 @@
     .news .owl-carousel span {
       color: #81868e;
       font-size: 14px; }
-    .news .owl-carousel .owl-dots .owl-dot span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #b2b3b3;
+    .news .owl-carousel .owl-dots {
+      display: flex;
+      flex-direction: column;
       position: absolute;
-      top: 30%;
-      right: 0;
-      margin: 5px; }
+      top: 35%;
+      right: 0; }
+      .news .owl-carousel .owl-dots .owl-dot {
+        outline: none; }
+        .news .owl-carousel .owl-dots .owl-dot span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 1px solid #b2b3b3;
+          background-color: transparent;
+          margin: 5px; }
+        .news .owl-carousel .owl-dots .owl-dot.active span {
+          background-color: #b2b3b3; }
 
 /*...PRICE...*/
 .price {
@@ -768,43 +776,51 @@
     font-size: 14px;
     margin: 0 auto 61px;
     max-width: 600px; }
-  .price .coupon {
-    background-color: #fff;
-    padding: 0;
-    -webkit-box-shadow: 1px 1px 0 0 #e7e7e7;
-    box-shadow: 1px 1px 0 0 #e7e7e7; }
+  .price .d-flex {
+    max-width: 1170px;
+    justify-content: space-between; }
     @media screen and (max-width: 992px) {
-      .price .coupon {
-        margin: 15px;
-        width: 95%; } }
-    .price .coupon h3 {
-      background-color: #19bd9a;
-      color: #fff;
-      padding: 27px 0 26px;
-      margin: 0 0 67px 0; }
-    .price .coupon .bottom {
-      font-family: "Open Sans", sans-serif;
-      font-size: 18px;
-      margin-bottom: 0;
-      letter-spacing: normal;
-      padding: 27px 0 29px; }
-      .price .coupon .bottom i {
-        margin-left: 13px;
-        font-size: 16px; }
-    .price .coupon p.text-center {
-      font-size: 20px;
-      margin-bottom: 107px; }
-    .price .coupon .big {
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 900;
-      font-size: 42px;
-      margin: 67px 0 11px; }
-    .price .coupon p.text-left {
-      color: #81868e;
-      padding: 35px 30px 35px 33px;
-      margin: 0;
-      font-size: 14px;
-      line-height: 31px; }
+      .price .d-flex {
+        flex-wrap: wrap;
+        justify-content: center; } }
+    .price .d-flex .coupon {
+      background-color: #fff;
+      padding: 0;
+      max-width: 232px;
+      -webkit-box-shadow: 1px 1px 0 0 #e7e7e7;
+      box-shadow: 1px 1px 0 0 #e7e7e7; }
+      @media screen and (max-width: 992px) {
+        .price .d-flex .coupon {
+          margin: 15px;
+          width: 95%; } }
+      .price .d-flex .coupon h3 {
+        background-color: #19bd9a;
+        color: #fff;
+        padding: 27px 0 26px;
+        margin: 0 0 67px 0; }
+      .price .d-flex .coupon .bottom {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        margin-bottom: 0;
+        letter-spacing: normal;
+        padding: 27px 0 29px; }
+        .price .d-flex .coupon .bottom i {
+          margin-left: 13px;
+          font-size: 16px; }
+      .price .d-flex .coupon p.text-center {
+        font-size: 20px;
+        margin-bottom: 107px; }
+      .price .d-flex .coupon .big {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 900;
+        font-size: 42px;
+        margin: 67px 0 11px; }
+      .price .d-flex .coupon p.text-left {
+        color: #81868e;
+        padding: 35px 30px 35px 33px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 31px; }
 
 /*...Subscribe us...*/
 .subscribe {
