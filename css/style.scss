@@ -56,9 +56,12 @@ $font-family-regular: 'Open Sans', sans-serif;
 @keyframes point {
   0% {
     bottom: 77px;
+   }
+  50%{
+    bottom: 50px;
   }
   100% {
-    bottom: 50px;
+    bottom: 77px;
   }
 }
 
@@ -201,9 +204,14 @@ $font-family-regular: 'Open Sans', sans-serif;
     margin-bottom: 26px;
     outline: none;
     background-color: #fff;
+    &:hover{
+      background-color: #19bd9a;
+      border: 1px solid #fff;
+      color: #fff;
+    }
     &:active{
       border: 1px solid #333b46;
-      background-color: #fff;
+      background-color: #333b46;
       color: #333b46;
       outline: none;
     }

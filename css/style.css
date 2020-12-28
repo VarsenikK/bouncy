@@ -14,8 +14,10 @@
 @keyframes point {
   0% {
     bottom: 77px; }
+  50% {
+    bottom: 50px; }
   100% {
-    bottom: 50px; } }
+    bottom: 77px; } }
 .d-flex {
   display: flex; }
 
@@ -126,9 +128,13 @@
   margin-bottom: 26px;
   outline: none;
   background-color: #fff; }
+  .about .btn-lg:hover {
+    background-color: #19bd9a;
+    border: 1px solid #fff;
+    color: #fff; }
   .about .btn-lg:active {
     border: 1px solid #333b46;
-    background-color: #fff;
+    background-color: #333b46;
     color: #333b46;
     outline: none; }
 
