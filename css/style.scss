@@ -192,6 +192,7 @@ $font-family-regular: 'Open Sans', sans-serif;
     margin: 0 auto 76px;
   }
 
+
   .btn-lg {
     background-image: none;
     padding: 12px 34px 11px;
@@ -840,12 +841,13 @@ $font-family-regular: 'Open Sans', sans-serif;
       font-family: $font-family-main;
 
     }
-    .label{
+    .description{
       color: #81868e;
       font-size: 16px;
       font-family: $font-family-main;
       font-weight: 300;
       padding-left: 0;
+      margin-bottom: 10px;
       span{
         float: right;
       }
@@ -1075,32 +1077,16 @@ $font-family-regular: 'Open Sans', sans-serif;
       justify-content: center;
     }
     .coupon {
+      position: relative;
       background-color: #fff;
       padding: 0;
-      max-width: 232px;
       -webkit-box-shadow: 1px 1px 0 0 #e7e7e7;
       box-shadow: 1px 1px 0 0 #e7e7e7;
-
-      @include max-screen(992px) {
-        margin: 15px;
-        width: 95%;
-      }
       h3 {
         background-color: #19bd9a;
         color: #fff;
         padding: 27px 0 26px;
         margin: 0 0 67px 0;
-      }
-      .bottom {
-        font-family: $font-family-regular;
-        font-size: 18px;
-        margin-bottom: 0;
-        letter-spacing: normal;
-        padding: 27px 0 29px;
-        i {
-          margin-left: 13px;
-          font-size: 16px;
-        }
       }
       p.text-center {
         font-size: 20px;
@@ -1112,13 +1098,84 @@ $font-family-regular: 'Open Sans', sans-serif;
         font-size: 42px;
         margin: 67px 0 11px;
       }
-      p.text-left {
-        color: #81868e;
-        padding: 35px 30px 35px 33px;
-        margin: 0;
-        font-size: 14px;
-        line-height: 31px;
+      &:hover .coupon-hover{
+        opacity: 1;
       }
+      .coupon-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+        transition: 0.3s;
+
+        .bottom {
+          font-family: $font-family-regular;
+          font-size: 18px;
+          margin-bottom: 0;
+          letter-spacing: normal;
+          padding: 27px 0 29px;
+          i {
+            margin-left: 13px;
+            font-size: 16px;
+          }
+        }
+        p.text-left {
+          color: #81868e;
+          padding: 35px 30px 35px 33px;
+          margin: 0;
+          font-size: 14px;
+          line-height: 31px;
+        }
+        &:hover{
+          display: block;
+
+        }
+
+
+      }
+
+
+      @include max-screen(992px) {
+        margin: 15px;
+        width: 95%;
+      }
+      //h3 {
+      //  background-color: #19bd9a;
+      //  color: #fff;
+      //  padding: 27px 0 26px;
+      //  margin: 0 0 67px 0;
+      //}
+      //.bottom {
+      //  font-family: $font-family-regular;
+      //  font-size: 18px;
+      //  margin-bottom: 0;
+      //  letter-spacing: normal;
+      //  padding: 27px 0 29px;
+      //  i {
+      //    margin-left: 13px;
+      //    font-size: 16px;
+      //  }
+      //}
+      //p.text-center {
+      //  font-size: 20px;
+      //  margin-bottom: 107px;
+      //}
+      //.big {
+      //  font-family: $font-family-main;
+      //  font-weight: 900;
+      //  font-size: 42px;
+      //  margin: 67px 0 11px;
+      //}
+      //p.text-left {
+      //  color: #81868e;
+      //  padding: 35px 30px 35px 33px;
+      //  margin: 0;
+      //  font-size: 14px;
+      //  line-height: 31px;
+      //}
     }
   }
 }
