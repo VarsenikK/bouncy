@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
 
     var circleProgress = (function(selector) {
